@@ -1,0 +1,50 @@
+# The start symbol is START.
+
+# These two rules are required; choose their weights carefully!
+99 START -> S1
+1 START -> S2
+
+# This is a very, very, very simple grammar to get you started.
+
+# Questions
+1 S1 -> WP DOES NPs VB Q
+1 S1 -> WP DO NPp VB Q
+
+# Plural
+1 S1 -> NPp VPp EOS
+1 S1 -> NPp PA VPp EOS
+
+# Singular
+1 S1 -> NPs VPs EOS
+1 S1 -> NPs PA VPs EOS
+
+# Plural
+1 VPp -> V3P NPp
+
+# Singular
+1 VPs -> VerbT NPs
+1 VPs -> V3S NPs
+
+# Plural
+20 NPp -> Det Nbarp
+1 NPp -> PlPrN
+
+# Singular
+20 NPs -> Det Nbars
+1 NPs -> Proper
+
+# Plural
+20 Nbarp -> PlN
+1 Nbarp -> Nbarp PP
+1 Nbarp -> Adjbar PlN
+
+# Singular
+20 Nbars -> Noun
+1 Nbars -> Nbars PP
+1 Nbars -> Adjbar Noun
+
+1 PP -> Prep NPs
+1 PP -> Prep NPp
+
+1 Adjbar -> Adjbar Adj
+1 Adjbar -> Adj

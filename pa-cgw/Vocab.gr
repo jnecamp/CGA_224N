@@ -1,0 +1,286 @@
+# This is a hand-generated set of preterminal rules.
+# It specifies a simple tag set which will be handled by the S2
+# grammar and which can (though doesn't necessarily need to be)
+# handled by the S1 grammar.
+#
+# The weights given here may be changed, but no new vocabulary
+# items are to be added.
+
+# Miscellaneous items that don't fit into any of our simple tags are
+# given to Misc.  You will want to develop your own tags for these!
+
+# Singular and mass nouns.  Notice that only the
+# ones that start with consonants get our Noun tag.
+1	Noun ->	{castle | king | defeater | sovereign | servant | corner | land | quest | chalice | master | horse | fruit | swallow | sun | winter | coconut | pound | husk | home | weight | story}
+
+# Determiners.
+1	Det	 -> {a | another | any | each | every | no | that | the | this}
+
+# Prepositions.
+1	Prep -> above
+1	Prep ->	across
+1	Prep ->	at
+1	Prep ->	below
+1	Prep ->	by
+1	Prep ->	for
+1	Prep ->	from
+1	Prep ->	into
+1	Prep ->	near
+1	Prep ->	of
+1	Prep ->	on
+1	Prep ->	over
+1	Prep ->	through
+1	Prep ->	with
+
+# Proper nouns.  Note that our Proper tag is just for people.
+1	Proper -> {Arthur | Guinevere | Sir Lancelot | Sir Bedevere | Zoot | Dingo | Patsy | Uther Pendragon}
+
+# Verbs (third person singular present).
+# Note that only transitive verbs get our VerbT tag,
+# and some of those could also function as intransitives!
+1	VerbT -> has
+1	VerbT -> covers
+1	VerbT -> is
+1	VerbT -> drinks
+1	VerbT -> carries
+1	VerbT -> rides
+
+# End-of-sentence.
+1	EOS ->	!
+1	EOS ->	.
+1	Q ->	?
+
+# Pauses.
+1	PA ->	,
+1	PA ->	...
+1	PA ->	--
+1	PA ->	;
+1	PA ->	:
+
+# Coordinating conjunctions.
+1	CC ->	and
+1	CC ->	but
+1	CC ->	or
+1	Misc ->	either
+1	Misc ->	nor
+1	Misc ->	neither
+1	CC ->	so
+
+# Numbers.
+1	NB -> {eight | five | one | 5.5 | sixty | 5,000}
+
+# Expletive.
+1	Misc -> there
+
+# Subordinating conjunctions.
+1	SC -> {that | so | while | because | if}
+
+# Modals.
+1	MD -> can
+1	MD ->	could
+1	MD ->	may
+1	MD ->	might
+1	MD ->	must
+1	MD ->	ought
+1	MD ->	shall
+1	MD ->	should
+1	MD ->	will
+1	MD ->	would
+
+
+# Adjectives.
+1	Adj ->	bloody
+1	Adj ->	weary
+1	Adj ->	unable
+1	Adj ->	trusty
+1	Adj ->	further
+1	Adj ->	sacred
+1	Adj ->	tropical
+1	Adj ->	indigenous
+1	Adj ->	temperate
+1	Adj ->	hot
+1	Adj ->	lucky
+1	Adj ->	simple
+1	Adj ->	tiny
+1	Adj ->	hard	
+1	Adj ->	sensational
+1	Adj ->	comparable
+1	Adj ->	angolian
+1	Adj ->	yellow
+1	Adj ->	plodding
+
+# Comparative adjectives.
+1	CAdj ->	bloodier
+1	CAdj ->	wearier
+1	CAdj ->	trustier
+1	CAdj ->	hotter
+1	CAdj ->	simpler
+1	CAdj ->	tinier
+1	CAdj ->	harder
+
+# Superlative adjectives.
+1	SAdj ->	bloodiest
+1	SAdj ->	weariest
+1	SAdj ->	trustiest
+1	SAdj ->	hottest
+1	SAdj ->	simplest
+1	SAdj ->	tiniest
+1	SAdj ->	hardest
+
+# Plural nouns.
+1	PlN ->	coconuts
+1	PlN ->	halves
+1	PlN ->	snows
+1	PlN ->	mountains
+1	PlN ->	areas
+1	PlN ->	strangers
+1	PlN ->	inches
+1	PlN ->	snakes
+1	PlN ->	ants
+1	PlN ->	nights
+
+# More proper nouns, not people.
+
+1	PrN ->	Camelot
+1	PrN ->	England
+1	PrN ->	Holy Grail
+1	PrN ->	Round Table
+
+# Plural proper nouns.
+1	PlPrN ->	Britons
+1	PlPrN ->	Saxons
+
+# Personal subject pronouns.
+1	PPS ->	he
+1	PPS ->	it
+1	PPS ->	one
+1	PPS ->	she
+1	PPS ->	they
+
+# Personal object pronouns
+1	PPO ->	it
+1	PPO ->	her
+1	PPO ->	him
+1	PPO ->	them
+
+# Possessive personal pronouns
+1	PPP ->	her
+1	PPP ->	his
+1	PPP ->	its
+1	PPP ->	their
+
+# Adverbs.
+1	Adv ->	again
+1	Adv ->	already
+1	Adv ->	currently
+1	Adv ->	frequently
+1	Adv ->	precisely
+1	Adv ->	south
+1	Adv ->	successfully
+1	Adv ->	unfortunately
+
+# TODO: 'do'/'does'
+1	DO ->	do
+1	DOES ->	does
+
+# 'to'
+1	TO ->	to
+
+# 'not'
+1	NOT ->	not
+
+# Verbs (base form).
+1	VB ->	have
+1	VB ->	speak
+1	VB ->	cover
+1	VB ->	be
+1	VB ->	ride
+1	VB ->	drink
+1	VB ->	grow
+1	VB ->	carry
+1	VB ->	suggest
+1	VB ->	migrate
+1	VB ->	know
+
+# Verbs (past tense).
+1	VPT ->	had
+1	VPT ->	spoke
+1	VPT ->	covered
+1	VPT ->	was
+1	VPT ->	were
+1	VPT ->	rode
+1	VPT ->	drank
+1	VPT ->	grew
+1	VPT ->	carried
+1	VPT ->	suggested
+1	VPT ->	migrated
+1	VPT ->	knew
+
+# TODO: Verbs (present participles).
+1	Ving ->	having
+1	Ving ->	speaking
+1	Ving ->	covering
+1	Ving ->	being
+1	Ving ->	riding
+1	Ving ->	drinking
+1	Ving ->	growing
+1	Ving ->	carrying
+1	Ving ->	suggesting
+1	Ving ->	migrating
+1	Ving ->	knowing
+
+# Verbs (past participle).
+1	VPP ->	had
+1	VPP ->	spoken
+1	VPP ->	covered
+1	VPP ->	been
+1	VPP ->	ridden
+1	VPP ->	drunk
+1	VPP ->	grown
+1	VPP ->	carried
+1	VPP ->	suggested
+1	VPP ->	migrated
+1	VPP ->	known
+
+# More third person singular verbs.
+1	V3S ->	speaks
+1	V3S ->	grows
+1	V3S ->	goes
+1	V3S ->	migrates
+1	V3S ->	suggests
+1	V3S ->	knows
+
+# Verbs (present, plural, third person).
+1	V3P ->	have
+1	V3P ->	speak
+1	V3P ->	cover
+1	V3P ->	are
+1	V3P ->	ride
+1	V3P ->	drink
+1	V3P ->	grow
+1	V3P ->	carry
+1	V3P ->	suggest
+1	V3P ->	migrate
+1	V3P ->	know
+
+# Wh-determiners.
+1	WDT ->	that
+1	WDT ->	what
+1	WDT ->	which
+
+# Wh-pronouns.
+1	WP ->	what
+1	WP ->	who
+
+# Wh possessive pronoun.
+1	WPS ->	whose
+
+# Wh-adverbs
+1	WRB ->	how
+1	WRB ->	when
+1	WRB ->	where
+1	WRB ->	why
+
+
+# Possessive marker.
+1	PM ->	's
