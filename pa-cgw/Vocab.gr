@@ -38,12 +38,26 @@
 # Verbs (third person singular present).
 # Note that only transitive verbs get our VerbT tag,
 # and some of those could also function as intransitives!
-1	VerbT -> has
-1	VerbT -> covers
-1	VerbT -> is
-1	VerbT -> drinks
-1	VerbT -> carries
-1	VerbT -> rides
+
+# VerbTObj
+1	VerbTObj -> has
+1	VerbTObj -> covers
+1	VerbTObj -> is
+1	VerbTObj -> carries
+1	VerbTObj -> rides
+
+# VerbTTo
+1	VerbTTo -> has
+1	VerbTTo -> carries
+1	VerbTTo -> rides
+1	VerbTTo -> drinks
+
+# VerbTPrep
+1	VerbTPrep -> covers
+1	VerbTPrep -> drinks
+1	VerbTPrep -> carries
+1	VerbTPrep -> drinks
+
 
 # End-of-sentence.
 1	EOS ->	!
@@ -192,79 +206,177 @@
 1	NOT ->	not
 
 # Verbs (base form).
-1	VB ->	have
-1	VB ->	speak
-1	VB ->	cover
-1	VB ->	be
-1	VB ->	ride
-1	VB ->	drink
-1	VB ->	grow
-1	VB ->	carry
-1	VB ->	suggest
-1	VB ->	migrate
-1	VB ->	know
+
+# V object
+1	VBObj ->	have
+1	VBObj ->	cover
+1	VBObj ->	be
+1	VBObj ->	drink
+1	VBObj ->	grow
+1	VBObj ->	carry
+1	VBObj ->	know
+
+# VBTo
+1	VBTo ->	speak
+1	VBTo ->	ride
+1	VBTo ->	carry
+1	VBTo ->	migrate
+
+# VBPrep
+1	VBPrep ->	speak
+1	VBPrep ->	cover
+1	VBPrep ->	ride
+1	VBPrep ->	drink
+1	VBPrep ->	carry
+1	VBPrep ->	migrate
+
+# Special
+#1	VB ->	be
+#1	VB ->	know
+#1	VB ->	suggest
 
 # Verbs (past tense).
-1	VPT ->	had
-1	VPT ->	spoke
-1	VPT ->	covered
-1	VPT ->	was
-1	VPT ->	were
-1	VPT ->	rode
-1	VPT ->	drank
-1	VPT ->	grew
-1	VPT ->	carried
-1	VPT ->	suggested
-1	VPT ->	migrated
-1	VPT ->	knew
+
+# VPTObj
+1	VPTObj ->	had
+1	VPTObj ->	covered
+1	VPTObj ->	was
+1	VPTObj ->	were
+1	VPTObj ->	drank
+1	VPTObj ->	grew
+1	VPTObj ->	carried
+1	VPTObj ->	knew
+
+# VPTTO
+1	VPTTO ->	spoke
+1	VPTTO ->	rode
+1	VPTTO ->	carried
+1	VPTTO ->	migrated
+
+
+#VPTPrep
+1	VPTPrep ->	spoke
+1	VPTPrep ->	covered
+1	VPTPrep ->	rode
+1	VPTPrep ->	drank
+1	VPTPrep ->	carried
+1	VPTPrep ->	migrated
+
+# Specials
+#1	VPT ->	was
+#1	VPT ->	were
+#1	VPT ->	suggested
+#1	VPT ->	knew
 
 # TODO: Verbs (present participles).
-1	Ving ->	having
-1	Ving ->	speaking
-1	Ving ->	covering
-1	Ving ->	being
-1	Ving ->	riding
-1	Ving ->	drinking
-1	Ving ->	growing
-1	Ving ->	carrying
-1	Ving ->	suggesting
-1	Ving ->	migrating
-1	Ving ->	knowing
+
+# VingOBj
+1	VingObj ->	having
+1	VingObj ->	covering
+1	VingObj ->	being
+1	VingObj ->	drinking
+1	VingObj ->	growing
+1	VingObj ->	carrying
+1	VingObj ->	knowing
+
+# VingTo
+1	VingTo ->	speaking
+1	VingTo ->	riding
+1	VingTo ->	carrying
+1	VingTo ->	migrating
+
+# VingPrep
+1	VingPrep ->	speaking
+1	VingPrep ->	covering
+1	VingPrep ->	riding
+1	VingPrep ->	drinking
+1	VingPrep ->	carrying
+1	VingPrep ->	migrating
+
+# Specials
+#1	Ving ->	being
+#1	Ving ->	suggesting
+#1	Ving ->	knowing
 
 # Verbs (past participle).
-1	VPP ->	had
-1	VPP ->	spoken
-1	VPP ->	covered
-1	VPP ->	been
-1	VPP ->	ridden
-1	VPP ->	drunk
-1	VPP ->	grown
-1	VPP ->	carried
-1	VPP ->	suggested
-1	VPP ->	migrated
-1	VPP ->	known
+
+#VPPObj
+1	VPPObj ->	had
+1	VPPObj ->	covered
+1	VPPObj ->	been
+1	VPPObj ->	drunk
+1	VPPObj ->	grown
+1	VPPObj ->	carried
+1	VPPObj ->	known
+
+#VPPTo
+1	VPPTo ->	spoken
+1	VPPTo ->	ridden
+1	VPPTo ->	carried
+1	VPPTo ->	migrated
+
+#VPPPrep
+1	VPPPrep ->	spoken
+1	VPPPrep ->	covered
+1	VPPPrep ->	ridden
+1	VPPPrep ->	drunk
+1	VPPPrep ->	carried
+1	VPPPrep ->	migrated
+
+#Specials
+#1	VPP ->	been
+#1	VPP ->	suggested
+#1	VPP ->	known
+
 
 # More third person singular verbs.
-1	V3S ->	speaks
-1	V3S ->	grows
-1	V3S ->	goes
-1	V3S ->	migrates
-1	V3S ->	suggests
-1	V3S ->	knows
+
+# V3SObj
+1	V3SObj ->	grows
+1	V3SObj ->	knows
+
+# V3STo
+1	V3STo ->	speaks
+1	V3STo ->	goes
+1	V3STo ->	migrates
+
+# V3SPrep
+1	V3SPrep ->	speaks
+1	V3SPrep ->	goes
+1	V3SPrep ->	migrates
+
+#Specials
+#1	V3S ->	suggests
+#1	V3S ->	knows
 
 # Verbs (present, plural, third person).
-1	V3P ->	have
-1	V3P ->	speak
-1	V3P ->	cover
-1	V3P ->	are
-1	V3P ->	ride
-1	V3P ->	drink
-1	V3P ->	grow
-1	V3P ->	carry
-1	V3P ->	suggest
-1	V3P ->	migrate
-1	V3P ->	know
 
+# V3PObj
+1	V3PObj ->	cover
+1	V3PObj ->	are
+1	V3PObj ->	drink
+1	V3PObj ->	grow
+1	V3PObj ->	carry
+1	V3PObj ->	know
+
+# V3PTo
+1	V3PTo ->	speak
+1	V3PTo ->	ride
+1	V3PTo ->	carry
+1	V3PTo ->	migrate
+
+# V3PPrep
+1	V3PPrep ->	speak
+1	V3PPrep ->	cover
+1	V3PPrep ->	ride
+1	V3PPrep ->	drink
+1	V3PPrep ->	carry
+1	V3PPrep ->	migrate
+
+# SPecials
+#1	V3P ->	are
+#1	V3P ->	suggest
+#1	V3P ->	know
 #Verbs equality
 1	VEp -> are
 1	VEs -> is

@@ -18,7 +18,7 @@
 1 QUES -> WRB Q
 
 # DEMANDS
-1 D -> 
+1 D -> VB
 
 # ASSERTIONS
 # Plural
@@ -30,15 +30,45 @@
 1 A -> NPs PA VPs
 
 # PHRASES
+
+# VERBS
+
+1 VB -> VBObj ( { NPp | NPs } )
+1 VB -> VBTo ( TO { NPp | NPs } )
+1 VB -> VBPrep ( PP )
+
+1 VPT -> VPTObj ( { NPp | NPs } )
+1 VPT -> VPTTo ( TO { NPp | NPs } )
+1 VPT -> VPTPrep ( PP )
+
+1 Ving -> VingObj ( { NPp | NPs } )
+1 Ving -> VingTo ( TO { NPp | NPs } )
+1 Ving -> VingPrep ( PP )
+
+1 V3S -> V3SObj ( { NPp | NPs } )
+1 V3S -> V3STo ( TO { NPp | NPs } )
+1 V3S -> V3SPrep ( PP )
+
+1 V3P -> V3PObj ( { NPp | NPs } )
+1 V3P -> V3PTo ( TO { NPp | NPs } )
+1 V3P -> V3PPrep ( PP )
+
+1 VerbT -> VerbTObj ( { NPp | NPs } )
+1 VerbT -> VerbTTo ( TO { NPp | NPs } )
+1 VerbT -> VerbTPrep ( PP )
+
 # Future
 1 VF -> FH VB
+
 # Plural
-1 VPp -> V3P NPp
+1 VPp -> V3P
+1 VPp -> VPT
 1 VPp -> VF
 
 # Singular
-1 VPs -> VerbT NPs
-1 VPs -> V3S NPs
+1 VPs -> VerbT
+1 VPs -> V3S
+1 VPp -> VPT
 1 VPs -> VF
 
 # Plural
@@ -65,3 +95,6 @@
 
 1 Adjbar -> Adjbar Adj
 1 Adjbar -> Adj
+
+# Object
+
