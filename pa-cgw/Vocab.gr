@@ -47,11 +47,11 @@
 
 # End-of-sentence.
 1	EOS ->	!
-1	EOS ->	.
+20	EOS ->	.
 1	Q ->	?
 
 # Pauses.
-1	PA ->	,
+10	PA ->	,
 1	PA ->	...
 1	PA ->	--
 1	PA ->	;
@@ -87,6 +87,8 @@
 1	MD ->	will
 1	MD ->	would
 
+# Future.
+1 FH -> will
 
 # Adjectives.
 1	Adj ->	bloody
@@ -263,9 +265,13 @@
 1	V3P ->	migrate
 1	V3P ->	know
 
+#Verbs equality
+1	VEp -> are
+1	VEs -> is
+
 # Wh-determiners.
 1	WDT ->	that
-1	WDT ->	what
+#1	WDT ->	what
 1	WDT ->	which
 
 # Wh-pronouns.

@@ -4,26 +4,42 @@
 99 START -> S1
 1 START -> S2
 
-# This is a very, very, very simple grammar to get you started.
+# SENTENCES
+5 S1 -> A EOS
+1 S1 -> QUES Q
+1 S1 -> D EOS
 
-# Questions
-1 S1 -> WP DOES NPs VB Q
-1 S1 -> WP DO NPp VB Q
 
+# QUESTIONS
+1 QUES -> WP DOES NPs VB
+1 QUES -> WP DO NPp VB
+1 QUES -> MD D Q
+1 QUES -> WP Q
+1 QUES -> WRB Q
+
+# DEMANDS
+1 D -> 
+
+# ASSERTIONS
 # Plural
-1 S1 -> NPp VPp EOS
-1 S1 -> NPp PA VPp EOS
+1 A -> NPp VPp
+1 A -> NPp PA VPp
 
 # Singular
-1 S1 -> NPs VPs EOS
-1 S1 -> NPs PA VPs EOS
+1 A -> NPs VPs
+1 A -> NPs PA VPs
 
+# PHRASES
+# Future
+1 VF -> FH VB
 # Plural
 1 VPp -> V3P NPp
+1 VPp -> VF
 
 # Singular
 1 VPs -> VerbT NPs
 1 VPs -> V3S NPs
+1 VPs -> VF
 
 # Plural
 20 NPp -> Det Nbarp
@@ -37,6 +53,7 @@
 20 Nbarp -> PlN
 1 Nbarp -> Nbarp PP
 1 Nbarp -> Adjbar PlN
+1 Nbarp 
 
 # Singular
 20 Nbars -> Noun
