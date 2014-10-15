@@ -2,4 +2,4 @@
 
 # Add to the disjunction below any new POS tag that you might introduce in Vocab.gr. 
 #This ensures that your grammar retains the ability to parse any given sequence of POS tags
-1 Markov -> { Det | Misc | Noun | Prep | Proper | VerbT } (Markov) 
+1 Markov -> { Det | Misc | Noun | Prep | Proper | VerbTObj | VerbTTo | VerbTPrep | | EOS | Q | PA | CC | SC | MD | FH | Adj | CAdj | SAdj | PlN | PrN | PlPrN | PPS | PPO | PPP | Adv | DO | DOES | TO | NOT | VBObj | VBTo | VBPrep | VPTObj | VPTTo | VPTPrep | VingObj | VingTo | VingPrep |  VPPObj | VPPTo | VPPPrep | PM | WRB | WPS | Wh | WP | WDT | V3SObj | V3STo | V3SPrep | V3PObj | V3PTo | V3PPrep | VEp | VEs} (Markov) 
